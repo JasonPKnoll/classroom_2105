@@ -5,6 +5,7 @@ class Classroom
     @subject = subject
     @capacity = capacity
     @students = []
+
   end
 
   # Adds new students into the array utilizing << opperator
@@ -24,5 +25,10 @@ class Classroom
     else
       false
     end
+  end
+
+    #kicks a student out
+  def kick_out
+      @students = students.shift
   end
 end
