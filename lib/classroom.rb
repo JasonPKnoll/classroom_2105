@@ -6,6 +6,8 @@ class Classroom
     @capacity = capacity
   end
 
-
+  def students
+    students = []
+  end
 
 end
