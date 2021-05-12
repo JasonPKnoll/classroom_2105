@@ -7,8 +7,14 @@ class Classroom
     @students = []
   end
 
+  # Adds new students into the array utilizing << opperator
   def add_student(new_student)
     @students << new_student
+  end
+
+  # Upcases the entire Array of "students"
+  def yell_at_students
+    @students = students.map(&:upcase)
   end
 
 end
