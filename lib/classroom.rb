@@ -1,8 +1,11 @@
 class Classroom
-  attr_reader :classroom
+  attr_accessor :subject, :capacity
 
-  def initialize(classroom, period)
-    @classroom = classroom
-    @period = period
+  def initialize(subject, capacity)
+    @subject = subject
+    @capacity = capacity
   end
+
+
+
 end
