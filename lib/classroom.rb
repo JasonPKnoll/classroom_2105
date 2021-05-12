@@ -17,4 +17,12 @@ class Classroom
     @students = students.map(&:upcase)
   end
 
+  # checks to see if classroom is capacity
+  def over_capacity
+    if @students.count >= @capacity
+      true
+    else
+      false
+    end
+  end
 end

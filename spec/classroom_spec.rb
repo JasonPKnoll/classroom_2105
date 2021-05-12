@@ -44,5 +44,21 @@ describe Classroom do
 
       expect(classroom.yell_at_students).to eq ['MIKE', 'MEGAN', 'BOB']
     end
+
+    it 'Checks if classroom is over capacity' do
+      classroom = Classroom.new('History', 4)
+      classroom.add_student('Mike')
+      classroom.add_student('Megan')
+      classroom.add_student('Bob')
+      classroom.over_capacity
+
+      expect(classroom.over_capacity).to eq false
+
+      classroom.add_student('Eve')
+      classroom.add_student('Alice')
+      classroom.over_capacity
+
+      expect(classroom.over_capacity).to eq true
+    end
   end
 end
